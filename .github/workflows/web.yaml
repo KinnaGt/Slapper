@@ -1,16 +1,37 @@
-name: Gh-Pages
+name: Deploy to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2 # Only works with v2
+      - uses: actions/checkout@v2
+
       - uses: subosito/flutter-action@v1
-      - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          baseHref: /Responsive-Blog-Theme-using-Flutter/
+          flutter-version: '1.19.x' 
+          channel: 'beta' # Required for web
+
+      - name: Enable Flutter Web
+        run: flutter config --enable-web
+
+      - name: Download Dependencies
+        run: flutter pub get
+
+      - name: Build
+        run: flutter build web
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          force_orphan: true
+          user_name: 'github-ci[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Publish to gh-pages'
