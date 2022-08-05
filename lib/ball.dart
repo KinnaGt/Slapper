@@ -7,7 +7,7 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 
 import 'lines/ball_line.dart';
-import 'robert_slapper.dart';
+import 'slapper.dart';
 
 class Ball extends SpriteComponent with Hitbox, Collidable {
   Ball({

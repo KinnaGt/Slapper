@@ -3,7 +3,7 @@ import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
 
-import '../robert_slapper.dart';
+import '../slapper.dart';
 import 'ball_line.dart';
 import 'despawner.dart';
 import 'spawn_line.dart';

@@ -4,7 +4,7 @@ import 'package:flame/gestures.dart';
 import 'package:flame/parallax.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
-import 'package:josu_slapper/robert_colors.dart';
+import 'package:josu_slapper/colors.dart';
 import 'package:josu_slapper/session_manager.dart';
 
 import 'ball.dart';

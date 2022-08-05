@@ -4,7 +4,7 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
-import 'robert_slapper.dart';
+import 'slapper.dart';
 
 class SessionManager extends BaseComponent {
   SessionManager({required this.game, required Vector2 size}) {

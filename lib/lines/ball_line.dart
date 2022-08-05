@@ -4,7 +4,7 @@ import 'package:flame/components.dart';
 import 'package:flame/geometry.dart';
 import 'package:flutter/painting.dart';
 
-import '../../robert_slapper.dart';
+import '../slapper.dart';
 
 class BallLine extends ShapeComponent with Hitbox, Collidable {
   BallLine({

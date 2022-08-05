@@ -1,8 +1,8 @@
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:josu_slapper/robert_colors.dart';
-import 'robert_slapper.dart';
+import 'package:josu_slapper/colors.dart';
+import 'slapper.dart';
 
 const pauseMenu = 'PauseMenu';
 
