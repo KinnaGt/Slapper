@@ -25,7 +25,7 @@ class Ball extends SpriteComponent with Hitbox, Collidable {
 
   @override
   Future<void>? onLoad() async {
-    sprite = await Sprite.load('Logo2.png');
+    sprite = await Sprite.load('Logo.png');
     size = Vector2.all(128.0);
     this.anchor = Anchor.center;
     return super.onLoad();

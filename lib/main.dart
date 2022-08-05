@@ -37,7 +37,7 @@ class PauseMenuOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Title(
-      title: 'Josu Slapper',
+      title: 'Slapper',
       color: Colors.white,
       child: Center(
         child: Container(
@@ -51,7 +51,7 @@ class PauseMenuOverlay extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('Josu Slapper',
+              Text('Slapper',
                   style: TextStyle(
                     fontSize: 32,
                     color: Colors.white,
@@ -64,15 +64,14 @@ class PauseMenuOverlay extends StatelessWidget {
                     )),
               Spacer(),
               Image.asset(
-                'assets/images/Logo2.png',
+                'assets/images/Logo.png',
                 height: 180,
               ),
               Spacer(),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 0,
+                  elevation: 0, backgroundColor: RobertColors.primary,
                   padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 64),
-                  primary: RobertColors.primary,
                 ),
                 onPressed: () {
                   robertSlapper.overlays.remove(pauseMenu);

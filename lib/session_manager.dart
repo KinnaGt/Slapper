@@ -9,12 +9,12 @@ import 'slapper.dart';
 class SessionManager extends BaseComponent {
   SessionManager({required this.game, required Vector2 size}) {
     TextPaint regular = TextPaint(config: TextPaintConfig(color: Colors.white));
-    scoreComponent = TextComponent('score: $_score', textRenderer: regular)
+    scoreComponent = TextComponent('Score: $_score', textRenderer: regular)
       ..anchor = Anchor.topCenter
       ..x = size.x / 1.7 // size is a property from game
       ..y = 32.0;
 
-    healthLeftComponent = TextComponent('health: $_healthLeft', textRenderer: regular)
+    healthLeftComponent = TextComponent('Health: $_healthLeft', textRenderer: regular)
       ..anchor = Anchor.topCenter
       ..x = size.x / 2.5 // size is a property from game
       ..y = 32.0;
